@@ -22,10 +22,13 @@
     </table>
 
     <br>
-    <h4>Opomniki:</h4>
+    <h4>Nakupovalni seznami:</h4>
     <ul>
-        <li *ngFor="let opomnik of uporabnik.opomniki">
-            {{opomnik.naslov}}: {{opomnik.opis}}
+        <li *ngFor="let seznam of uporabnik.nakupovalniSeznami">
+            {{seznam.naziv}}: {{seznam.opis}}
+            <ul>
+                <li *ngFor="let artikel of seznam.artikli"> {{artikel.naziv}}, {{artikel.opis}} </li>
+            </ul>
         </li>
     </ul>
 

@@ -1,6 +1,10 @@
+import { NakupovalniSeznam } from "./nakupovalniSeznam";
+
 export class Uporabnik {
     id: number;
     ime: string;
-
-    // ostali atributi
+    priimek: string;
+    uporabniskoIme: string;
+    email: string;
+    nakupovalniSeznami: NakupovalniSeznam[];
 }
